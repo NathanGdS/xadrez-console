@@ -30,8 +30,10 @@ namespace xadrez
 
         private void colocarPecas()
         {
-            this.Tab.ColocarPeca(new Cavalo(Cor.White, this.Tab), new PosicaoXadrez('c',1).ToPosicao());
-            //Tab.ColocarPeca(new Rei(Cor.White, tab), new Posicao(7, 4));
+            this.Tab.ColocarPeca(new Rei(Cor.White, this.Tab), new PosicaoXadrez('c',1).ToPosicao());
+            this.Tab.ColocarPeca(new Torre(Cor.White, this.Tab), new PosicaoXadrez('c', 2).ToPosicao());
+
+            this.Tab.ColocarPeca(new Rei(Cor.Black, this.Tab), new PosicaoXadrez('c', 8).ToPosicao());
         }
 
     }
