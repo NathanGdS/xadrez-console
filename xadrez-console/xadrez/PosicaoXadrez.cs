@@ -1,27 +1,22 @@
 ﻿using tabuleiro;
 
-namespace xadrez
-{
-    class PosicaoXadrez
-    {
-        public char Coluna { get; set; }
-        public int Linha { get; set; }
+namespace xadrez {
+    class PosicaoXadrez {
 
-        public PosicaoXadrez(char coluna, int linha)
-        {
-            this.Coluna = coluna;
-            this.Linha = linha;
+        public char coluna { get; set; }
+        public int linha { get; set; }
+
+        public PosicaoXadrez(char coluna, int linha) {
+            this.coluna = coluna;
+            this.linha = linha;
         }
 
-        public Posicao ToPosicao()
-        {
-            return new Posicao(8 - this.Linha, this.Coluna - 'a');
+        public Posicao toPosicao() {
+            return new Posicao(8 - linha, coluna - 'a');
         }
 
-        public override string ToString()
-        {
-            return "" + this.Coluna + this.Linha;
+        public override string ToString() {
+            return "" + coluna + linha;
         }
-
     }
 }
