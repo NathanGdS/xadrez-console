@@ -14,11 +14,14 @@ namespace xadrez_console {
             Console.WriteLine();
 
             Console.WriteLine("Turno: " + partida.turno);
+            if (!partida.terminada) {
+                Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
 
-            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
-
-            if (partida.xeque) {
-                Console.WriteLine("\nVocê está em Xeque!");
+                if (partida.xeque) {
+                    Console.WriteLine("\nVocê está em Xeque!");
+                }
+            } else {
+                Console.WriteLine("Xeque-mate!\nVencedor: " + partida.jogadorAtual);
             }
         }
 
